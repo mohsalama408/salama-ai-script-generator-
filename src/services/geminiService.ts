@@ -1,11 +1,13 @@
+
 import { GoogleGenAI } from "@google/genai";
 
-// FIX: Switched from import.meta.env.VITE_API_KEY to process.env.API_KEY to align with guidelines.
+// FIX: Per coding guidelines, API key must be obtained exclusively from process.env.API_KEY.
+// The execution environment is expected to make this variable available.
 const API_KEY = process.env.API_KEY;
 
 if (!API_KEY) {
-  // FIX: Updated error message to reflect the change to process.env.API_KEY.
-  throw new Error("API_KEY environment variable not set");
+  // FIX: Updated error message to reflect the use of API_KEY.
+  throw new Error("API_KEY environment variable not set. Please add it to your hosting provider's environment variables.");
 }
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
