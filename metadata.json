@@ -1,0 +1,5 @@
+{
+  "name": " Salama AI Script Generator01",
+  "description": "An application that learns from your writing style to generate new scripts. Provide examples, then give it a new topic, and it will create content in your unique voice.",
+  "requestFramePermissions": []
+}
